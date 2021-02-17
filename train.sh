@@ -28,7 +28,7 @@ nohup t5_mesh_transformer  \
   --gin_param="utils.tpu_mesh_shape.model_parallelism = 1" \
   --gin_param="utils.tpu_mesh_shape.tpu_topology = '2x2'" \
   --gin_param="utils.run.train_dataset_fn = @t5.models.mesh_transformer.tsv_dataset_fn" \
-  --gin_param="tsv_dataset_fn.filename = 'gs://crys-west4-a/t5/resampled_frombm25_shuffled/query_doc_pairs.train.shuffled.tsv' " \
+  --gin_param="tsv_dataset_fn.filename = '${GS_FOLDER}/query_doc_pairs.train.shuffled.tsv' " \
   --gin_file="learning_rate_schedules/constant_0_001.gin" \
   --gin_param="run.train_steps = 1100000" \
   --gin_param="run.save_checkpoints_steps = 10000" \
