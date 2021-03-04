@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
         "--triples_train", "-t", type=str, required=True, help="tsv file <query>, <positive_document>, <negative_document>")
 parser.add_argument(
-        "--query_fn", type=str, default="/home/crystina/src/sigir2021/pygaggle/data/msmarco_passage/train_set/queries.train.tsv")
+        "--query_fn", type=str, default="/home/crystina/src/sigir2021/pygaggle/data/msmarco_passage/train_set/original/queries.train.tsv")
 parser.add_argument(
         "--collection_fn", type=str, default="/home/crystina/src/sigir2021/pygaggle/data/msmarco_passage/collection.tsv")
 parser.add_argument("--triples_type", type=str, default="id", choices=["txt", "id"])
